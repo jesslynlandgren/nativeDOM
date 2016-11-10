@@ -12,7 +12,30 @@
     Typing a task description into #input-field and then clicking #add-button should add a new li with
     the task description and a remove button
     into #tasks.
+    document.createElement() - to create a new DOM element
+    * node.textContent - to set the text value of the created element
+    * document.getElementById() - to find the #list element
+    * node.appendChild() - to add the new element to the #list element
     */
+    window.addEventListener('load', function(){
+        document.getElementById('add-button').addEventListener('click', function(event){
+            var newItem = document.createElement('li')
+            document.getElementById('tasks').appendChild(newItem)
+            var itemText = document.getElementById('input-field').value;
+            newItem.innerHTML = itemText + '<button>remove</button>';
+        })
+        var tasks = document.getElementById('tasks');
+        tasks.addEventListener('click', function(event){
+            var button = event.target;
+            var li = button.closest('li').remove();
+        })
+        // for (var i=0; i<buttons.length; i++){
+        //     buttons[i].addEventListener('click', function (event) {
+        //         var button = event.target;
+        //         var li = button.closest('li').remove();
+        //     })
+        // }
+    })
     </script>
   </head>
   <body>

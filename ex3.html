@@ -11,6 +11,10 @@
     /*
     Use a CSS selector to select the a elements with the class of "link". Print them out to the console.
     */
+        var results = document.querySelectorAll('a .link')
+        for(var i=0; i<results.length; i++) {
+            console.log(results[i]);
+        };
     </script>
   </body>
 </html>

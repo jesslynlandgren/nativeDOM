@@ -19,6 +19,11 @@
     * document.getElementById() - to find the #list element
     * node.appendChild() - to add the new element to the #list element
     */
+
+    var results = document.getElementById('list');
+    var newLi = document.createElement('li');
+    newLi.textContent = 'Three';
+    results.appendChild(newLi);
     </script>
   </body>
 </html>

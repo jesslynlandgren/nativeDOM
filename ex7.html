@@ -9,7 +9,15 @@
     <script>
     /*
     Add an a element that goes to http://google.com within the #content element by finding that element on the page and setting its innerHTML property.
+    *
+    * document.createElement() - to create a new DOM element
+    * node.textContent - to set the text value of the created element
+    * document.getElementById() - to find the #list element
+    * node.appendChild() - to add the new element to the #list element
     */
+
+    document.getElementById('content').innerHTML = '<a href="http://google.com">Google</a>';
+
     </script>
   </body>
 </html>

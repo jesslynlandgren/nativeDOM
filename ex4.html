@@ -18,6 +18,10 @@
     Use a CSS selector to select all li elements within the ul with
     the class of "results". Print them out to the console.
     */
+        var results = document.querySelectorAll('ul.results > li')
+        for(var i=0; i<results.length; i++) {
+            console.log(results[i]);
+        };
     </script>
   </body>
 </html>

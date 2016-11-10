@@ -17,6 +17,11 @@
     Except this time, add the event listener to the body - which you can access simply
     through document.body.
     */
+    var body = document.getElementsByTagName('body');
+    body[0].addEventListener('click', function (event) {
+        var button = event.target;
+        button.textContent = "You clicked!";
+    });
     </script>
   </body>
 </html>
